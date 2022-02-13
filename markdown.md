@@ -197,6 +197,20 @@ z.B.
 ```
 
 --
+Schriftart Times
+```latex
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+```
+
+Schriftart Helvetica
+```latex
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+```
+
+--
 ### horizontale Ausrichtung
 TODO (flushleft, ...)
 
