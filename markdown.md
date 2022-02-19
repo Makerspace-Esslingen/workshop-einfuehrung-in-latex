@@ -7,9 +7,11 @@ TODO
 ---
 ## Minimales LaTeX-Dokument
 
-```latex[1|3-4]
+```latex[1-2|4-6]
+% setzen der Dokumentklasse
 \documentclass{article}
 
+% umschliesst den Inhalt des Dokuments
 \begin{document}
 \end{document}
 ```
@@ -19,8 +21,7 @@ TODO
 - **article**
     - für wissenschaftliche Artikel
     - typischer Weise wenige Seiten
-    - Überschriften auf mehreren Ebenen
-    - Keine Kapitel
+    - mehrstufige Überschriften (5 Ebenen)
     - Standardmäßig wird der Titel nicht auf einer eigenen Seite gedruckt
 - **letter**
     - für Briefe
@@ -31,7 +32,7 @@ TODO
     - Seitenzahl typischer Weise unter 100 Seiten
     - Titel wird standardmäßig auf einer eigenen Seite gedruck
 - **book**
-     - für Bücher
+     - zusätzliche Überschriftenebene für Kapitel
      - typischer Weise >200 Seiten
      - mit Vorwort, Kapiteln, Anhängen, Inhaltsverzeichnis, Stichwortverzeichnis...
 
@@ -43,13 +44,83 @@ Weitere Dokumentklassen und deren Optionen siehe Kapitel 3 in [LaTeX2e: An unoff
 --
 ### Befehle und Umgebungen
 
-```latex[1|2|3|5-6]
+```latex[1|2|3|5-6|8-9]
 \befehlsname
 \befehlsname{erster Parameter}{zweiter Parameter}
 \befehlsname[optionaler Parameter]{erster}{zweiter}
 
+% Befehle können zusätzlich mit { } umschlossen werden
+{\befehlsname}
+
 \begin{Umgebungsname}
 \end{Umgebungsname}
+```
+
+--
+### Formatierung und Absätze
+- **\textbf{...}**  
+    Text wird fett gedruckt
+- **\textit{...}**  
+    Text wird kursiv gedruckt
+- <b>\\\\</b> oder **\newline**  
+    erzwingt einen Zeilenumbruch
+
+```latex[3]
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+Text mit \textbf{fett} oder \textit{kursiv} formatierten Wörtern.
+Hinter diesem Wort \\ kommt ein erzwungener Zeilenumbruch
+\end{document}
+```
+--
+### Formatierung und Absätze
+- **\newpage**  
+    erzwingt einen Seitenumbruch
+- **\pagebreak**  
+    fügt einen Seitenumbruch HINTER dem nächsten Zeilenumbruch ein.
+
+```latex[3]
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\pagebreak Am Ende dieses Absatzes wird ein Zeilenumbruch gemacht.
+\end{document}
+```
+
+--
+### Umlaute und Sonderzeichen
+
+ als Befehl
+ - **\\"a** bzw. **\\"A"** für ä bzw. Ä
+ - **\\"o** bzw. **\\"O"** für ö bzw. Ö
+ - **\\"u** bzw. **\\"U"** für ü bzw. Ü
+ - **{\\ss}** für ß
+
+ ```latex[4]
+ \documentclass{article}
+
+ \begin{document}
+ \"a \"A \"o \"O \"u \"u {\ss}
+ \end{document}
+ ```
+
+--
+# Umlaute und Sonderzeichen
+
+direkt verwenden durch Einbinden des *inputenc* Packages
+```latex[3]
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+äöüÄÖÜß
+\end{document}
 ```
 
 --
@@ -70,6 +141,8 @@ Packages definieren zusätzliche Befehle und Umgebungen für bestimmte Einsatzzw
     - automatische Silbentrennung
 - [**geometry**](https://ctan.org/pkg/geometry)
     - Seitenlayout (z.B. Seitenränder) setzen
+- [**inputenc**](https://ctan.org/pkg/inputenc)
+    - Setzen der Quelltext-Kodierung für korrekte Verwendung von Sonderzeichen
 
 --
 - [**glossaries**](https://ctan.org/pkg/glossaries)
@@ -82,7 +155,7 @@ Packages definieren zusätzliche Befehle und Umgebungen für bestimmte Einsatzzw
     - Setzen von Zeilenabständen
 
 --
-### Beispiel
+### Beispiel-Dokumentkopf
 ```latex[1-7|9-11|13-15|17-18|20-22]
 % Dokumentklasse article auswählen
 %   Optionen:
@@ -110,38 +183,6 @@ Dies ist ein Absatz mit Text.
 
 ---
 ## Text formatieren und strukturieren
-### Absätze
-
-- **\textbf{...}**  
-    Text wird fett gedruckt
-- **\textit{...}**  
-    Text wird kursiv gedruckt
-- <b>\\\\</b> oder **\newline**  
-    erzwingt einen Zeilenumbruch
-
---
-- **\newpage**  
-    erzwingt einen Seitenumbruch
-- **\pagebreak**  
-    fügt einen Seitenumbruch HINTER dem nächsten Zeilenumbruch ein. 
-
---
-```latex
-Der Text eines Absatzes wird von LaTeX automatisch im
-Blocksatz ausgerichtet und mit Silbentrennung sowie
-eilenumbrüchen versehen. \textbf{Fett-} und
-\textit{Kursiv-}Druck sind ebenfalls möglich.
-Einzelne Zeilenumbrüche im Quelltext werden im Druck ignoriert.
-Zeilenumbrüche können\\
-erzwungen \newline
-werden.
-
-Ein neuer Absatz beginnt automatisch, wenn im Quelltext zwei
-aufeinander folgende Zeilenumbrüche gefunden werden. Die erste
-Zeile wird dabei automatisch eingerückt.
-```
-
---
 ### Zeilenabstand setzen
 Das Package [**setspace**](https://ctan.org/pkg/setspace?lang=de) bringt eine Reihe von Befehlen mit, um den Zeilenabstand des Dokuments zu Beginn zu setzen:
 
@@ -157,7 +198,7 @@ Das Package [**setspace**](https://ctan.org/pkg/setspace?lang=de) bringt eine Re
 
 --
 Alternativ führt das **setspace** Package Umgebungen ein, innerhalb derer ein bestimmte Zeilenabstand vorgegeben werden kann.  
-  
+
 - **singlespacing**  
 - **onehalfspacing**  
 - **doublespacing**  

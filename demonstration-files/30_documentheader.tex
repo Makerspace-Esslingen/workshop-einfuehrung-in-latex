@@ -1,0 +1,22 @@
+% Dokumentklasse article auswählen
+%   Optionen:
+%     11pt      - Standardschriftgröße
+%     a4paper   - Papierformat
+%     titlepage - Titel auf eigener Seite ausgeben
+%     twoside   - Seitenlayout auf beidseitigen Druck optimieren
+\documentclass[11pt,a4paper,titlepage,twoside]{article}
+
+% "linken" Seitenrand auf 3cm setzen
+% - wird durch die Option "twoside" automatisch alterniert
+\usepackage[left=3 cm]{geometry}
+
+% Zeichensatz der Eingabedatei festlegen
+% erlaubt direktes Tippen von Umlauten
+\usepackage[utf8]{inputenc}
+
+% Silbentrennung für die neue deutsche Rechtschreibung laden
+\usepackage[ngerman]{babel}
+
+\begin{document}
+Dies ist ein Absatz mit Text.
+\end{document}

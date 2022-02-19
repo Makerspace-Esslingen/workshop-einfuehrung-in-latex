@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+Der Text eines Absatzes wird von LaTeX automatisch im
+Blocksatz ausgerichtet und mit Silbentrennung sowie
+Zeilenumbrüchen versehen. \textbf{Fett-} und
+\textit{Kursiv-}Druck sind ebenfalls möglich.
+Einzelne Zeilenumbrüche im Quelltext werden im Druck ignoriert.
+Zeilenumbrüche können\\
+erzwungen \newline
+werden.
+
+Ein neuer Absatz beginnt automatisch, wenn im Quelltext zwei
+aufeinanderfolgende Zeilenumbrüche gefunden werden. Die erste
+Zeile wird dabei automatisch eingerückt.
+
+Am Ende dieser Zeile wird ein Seitenumbruch gemacht. \pagebreak
+Folgesätze, die zum selben Absatz gehören, werden benutzt, um die Zeile aufzufüllen.
+Ein Seitenumbruch kann auch an Ort und Stelle erzwungen werden. \newpage
+Folgesätze des aktuellen Absatzes werden dann erst auf der nächste Seite begonnen.
+\end{document}
