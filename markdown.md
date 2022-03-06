@@ -5,6 +5,13 @@
 TODO
 
 ---
+## LaTeX-Editor
+1. Texteditor + Installation einer LaTeX-Distribution  
+z.B. TexLive - [https://tug.org/texlive/](https://tug.org/texlive/)
+2. oder online im Browser:  
+Overleaf - [https://de.overleaf.com/](https://de.overleaf.com/)
+
+---
 ## Minimales LaTeX-Dokument
 
 ```latex[1-2|4-6]
@@ -65,16 +72,15 @@ Weitere Dokumentklassen und deren Optionen siehe Kapitel 3 in [LaTeX2e: An unoff
 - <b>\\\\</b> oder **\newline**  
     erzwingt einen Zeilenumbruch
 
-```latex[3]
+```latex[4-5]
 \documentclass{article}
-
-\usepackage[utf8]{inputenc}
 
 \begin{document}
 Text mit \textbf{fett} oder \textit{kursiv} formatierten Wörtern.
 Hinter diesem Wort \\ kommt ein erzwungener Zeilenumbruch
 \end{document}
 ```
+
 --
 ### Formatierung und Absätze
 - **\newpage**  
@@ -82,10 +88,8 @@ Hinter diesem Wort \\ kommt ein erzwungener Zeilenumbruch
 - **\pagebreak**  
     fügt einen Seitenumbruch HINTER dem nächsten Zeilenumbruch ein.
 
-```latex[3]
+```latex[4]
 \documentclass{article}
-
-\usepackage[utf8]{inputenc}
 
 \begin{document}
 \pagebreak Am Ende dieses Absatzes wird ein Zeilenumbruch gemacht.
@@ -113,7 +117,7 @@ Hinter diesem Wort \\ kommt ein erzwungener Zeilenumbruch
 # Umlaute und Sonderzeichen
 
 direkt verwenden durch Einbinden des *inputenc* Packages
-```latex[3]
+```latex[3,6]
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
@@ -135,24 +139,24 @@ Packages definieren zusätzliche Befehle und Umgebungen für bestimmte Einsatzzw
 --
 ### Standardpakete
 
-- [**amsmath**](https://ctan.org/pkg/amsmath)
-    - Ausgerichtetes Setzen von mehrstufigen Berechnungen / Herleitungen / Beweisen
 - [**babel**](https://ctan.org/pkg/babel)
     - automatische Silbentrennung
 - [**geometry**](https://ctan.org/pkg/geometry)
     - Seitenlayout (z.B. Seitenränder) setzen
-- [**inputenc**](https://ctan.org/pkg/inputenc)
-    - Setzen der Quelltext-Kodierung für korrekte Verwendung von Sonderzeichen
 
 --
+- [**inputenc**](https://ctan.org/pkg/inputenc)
+    - Setzen der Quelltext-Kodierung für korrekte Verwendung von Sonderzeichen
+- [**setspace**](https://ctan.org/pkg/setspace)
+    - Setzen von Zeilenabständen
+<!-- - [**amsmath**](https://ctan.org/pkg/amsmath)   
+    - Ausgerichtetes Setzen von mehrstufigen Berechnungen / Herleitungen / Beweisen
 - [**glossaries**](https://ctan.org/pkg/glossaries)
     - Verschiedene Index-Typen für Stichwortverzeichnis, Glossar, Abkürzungsverzeichnis, ...
 - [**hyperref**](https://ctan.org/pkg/hyperref)
     - Klickbare Referenzen innerhalb des PDF Dokuments
 - [**makeidx**](https://ctan.org/pkg/makeidx)
-    - Erzeugung von Stichwortverzeichnissen
-- [**setspace**](https://ctan.org/pkg/setspace)
-    - Setzen von Zeilenabständen
+    - Erzeugung von Stichwortverzeichnissen -->
 
 --
 ### Beispiel-Dokumentkopf
@@ -205,6 +209,7 @@ Alternativ führt das **setspace** Package Umgebungen ein, innerhalb derer ein b
 - **spacing{Faktor}**
 
 --
+
 ```latex[2,5-7,9-11]
 ...  
 \usepackage{setspace}  
@@ -253,11 +258,89 @@ Schriftart Helvetica
 
 --
 ### horizontale Ausrichtung
-TODO (flushleft, ...)
+Paragraphen können links oder rechtsbündig gesetzt werden mit den Umgebungen **flushleft** bzw. **flushright**
+
+```latex[4-10]
+\documentclass{article}
+
+\begin{document}
+  \begin{flushleft}
+    Dieser Absatz wird linksbündig gesetzt.
+  \end{flushleft}
+
+  \begin{flushright}
+    Dieser Absatz wird rechtsbündig gesetzt.
+  \end{flushright}
+\end{document}
+```
 
 --
-### Aufzählungen, Listen
-TODO (itemize, ...)
+### Listen
+Stichpunkte von Listen lassen sich innerhalb der **itemize** Umgebung mit dem **\item** Befehl setzen.
+
+```latex[4-7]
+\documentclass{article}
+
+\begin{document}
+  \begin{itemize}
+    \item Äpfel
+    \item Birnen
+  \end{itemize}
+\end{document}
+```
+
+--
+### verschachtelte Listen
+
+```latex[4-7,12|8-11]
+\documentclass{article}
+
+\begin{document}
+  \begin{itemize}
+    \item Äpfel
+    \item Birnen
+    \item Gemüse:
+        \begin{itemize}
+            \item Tomaten
+            \item Gurken
+        \end{itemize}
+  \end{itemize}
+\end{document}
+```
+
+--
+### Aufzählungen
+Aufzählungspunkte lassen sich analog innerhalb der **enumerate** Umgebung mit dem **\item** Befehl setzen.
+
+```latex[4-7]
+\documentclass{article}
+
+\begin{document}
+  \begin{enumerate}
+    \item Äpfel
+    \item Birnen
+  \end{enumerate}
+\end{document}
+```
+
+--
+### verschachtelte Aufzählungen
+
+```latex[4-7,12|8-11]
+\documentclass{article}
+
+\begin{document}
+  \begin{enumerate}
+    \item Äpfel
+    \item Birnen
+    \item Gemüse:
+        \begin{enumerate}
+            \item Tomaten
+            \item Gurken
+        \end{enumerate}
+  \end{enumerate}
+\end{document}
+```
 
 --
 ### Überschriften und Inhaltsverzeichnis
@@ -310,7 +393,16 @@ Beispiel
 ```
 
 ---
+## Kopf- und Fußzeilen
+TODO
+
+---
+## Frontblatt
+TODO ( Was unterscheidet ein Frontblatt von normalen Seiten? )
+
+---
 ## Mathematische Symbole
+- Siehe Kapitel 16 [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)  
 TODO (math mode, text mode)
 
 ---
@@ -320,11 +412,3 @@ TODO
 ---
 ## Bilder / Zeichnungen
 TODO
-
----
-## Kopf- und Fußzeilen
-TODO
-
----
-## Frontblatt
-TODO ( Was unterscheidet ein Frontblatt von normalen Seiten? )
