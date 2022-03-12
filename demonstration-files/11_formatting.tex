@@ -1,20 +1,10 @@
 \documentclass{article}
 
-\usepackage[utf8]{inputenc}
-
-% \usepackage[ngerman]{babel}
+% Demonstration Umlaute mit TexLive <= 2017
+% \usepackage[utf8]{inputenc}
 
 \begin{document}
-Der Text eines Absatzes wird von LaTeX automatisch im
-Blocksatz ausgerichtet und mit Silbentrennung sowie
-Zeilenumbrüchen versehen. \textbf{Fett-} und
-\textit{Kursiv-}Druck sind ebenfalls möglich.
-Einzelne Zeilenumbrüche im Quelltext werden im Druck ignoriert.
-Zeilenumbrüche können\\
-erzwungen \newline
-werden.
+Umlaute und Sonderzeichen lassen sich mit speziellen Befehlen verwenden: \"a, \"A, \"o, \"O, \"u, \"U, {\ss}.
 
-Ein neuer Absatz beginnt automatisch, wenn im Quelltext zwei
-aufeinanderfolgende Zeilenumbrüche gefunden werden. Die erste
-Zeile wird dabei automatisch eingerückt.
+In neueren LaTeX-Distributionen lassen sich diese Zeichen oft auch einfach direkt verwenden: ä Ä ö Ö ü Ü ß. Ältere LaTeX-Distrubutionen (z.B. TexLive 2017 und früher) verlangen, dass man das Package \textit{inputenc} einbindet.
 \end{document}
