@@ -116,7 +116,7 @@ Hinter diesem Wort \\ kommt ein erzwungener Zeilenumbruch
 --
 # Umlaute und Sonderzeichen
 
-direkt verwenden durch Einbinden des *inputenc* Packages
+direkt verwenden durch Einbinden des *inputenc* Packages (ab TexLive >=2018 nicht mehr notwendig)
 ```latex[3,6]
 \documentclass{article}
 
@@ -401,9 +401,65 @@ TODO
 TODO ( Was unterscheidet ein Frontblatt von normalen Seiten? )
 
 ---
-## Mathematische Symbole
+## Mathematische Symbole und Formeln
 - Siehe Kapitel 16 [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)  
-TODO (math mode, text mode)
+- Befehle für Formeln und Symbole funktionieren entweder im **Math mode** oder in einer **displaymath**-Umgebung
+
+--
+### Math mode
+- für mathematische Ausdrücke im Fliesstext
+-
+```latex
+$ ... $
+```
+-
+```latex
+\( ... \)
+```
+-
+```latex
+\begin{math} ... \end{math}
+```
+
+```latex[5|7|9]
+...
+
+\begin{document}
+  Die Funktionen
+  $ \sin x$
+  und
+  \( \cos \)
+  sowie
+  \begin{math} \tan x \end{math}
+  sind Winkelfunktionen.
+\end{document}
+```
+--
+### displaymath Umgebung
+- platziert mathematische Formeln zentriert ausserhalb des Textes
+
+```latex[5|7|9]
+...
+
+\begin{document}
+  Ein Beispiel für ein bestimmtes Integral eines Polynoms ist dieses.
+
+  \begin{displaymath}
+    \int_{i=0}^k x^2 + x = \bigl[ \frac{1}{3} x^3 + \frac{1}{2} x^2 \bigr]_0_k
+  \end{displaymath}
+\end{document}
+```
+
+--
+### Symbole, Brüche, Funktionen
+- Pi **\\pi**
+- Bruch **\\frac{1+x}{13}**
+- Kubikwurzel **\\sqrt[3]{x}**
+
+--
+- Subscript **a_k**
+- Exponent/Superscript **x^{3+i}**
+- Integrale **\\int_{n=0}^{k} x**
 
 ---
 ## Tabellen
