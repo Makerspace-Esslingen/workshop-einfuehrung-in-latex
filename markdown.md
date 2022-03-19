@@ -2,7 +2,8 @@
 
 ---
 ## Warum LaTeX
-TODO
+- Bearbeiten sehr umfangreicher Dokumente auf schwachen Rechnern
+- Eingabe von Quellcode statt umfangreicher Menüs und Untermenüs und Formeleditoren
 
 ---
 ## LaTeX-Editor
@@ -143,6 +144,8 @@ Packages definieren zusätzliche Befehle und Umgebungen für bestimmte Einsatzzw
     - automatische Silbentrennung
 - [**geometry**](https://ctan.org/pkg/geometry)
     - Seitenlayout (z.B. Seitenränder) setzen
+- [**graphics**](https://ctan.org/pkg/graphics)
+    - Laden und einfügen von Grafiken
 
 --
 - [**inputenc**](https://ctan.org/pkg/inputenc)
@@ -274,6 +277,19 @@ Paragraphen können links oder rechtsbündig gesetzt werden mit den Umgebungen *
 \end{document}
 ```
 
+---
+Mit Hilfe der Umgebung **center** lassen sich Absätze zentriert ausrichten
+
+```latex[4-6]
+\documentclass{article}
+
+\begin{document}
+  \begin{center}
+    Dieser Absatz wird zentriert gesetzt.
+  \end{center}
+\end{document}
+```
+
 --
 ### Listen
 Stichpunkte von Listen lassen sich innerhalb der **itemize** Umgebung mit dem **\item** Befehl setzen.
@@ -397,8 +413,23 @@ Beispiel
 TODO
 
 ---
-## Frontblatt
-TODO ( Was unterscheidet ein Frontblatt von normalen Seiten? )
+## Deckblatt
+- kann mit der Umgebung **titlepage** eingefügt werden
+- hat keine eigene Seitennummer
+- keine Kopf- oder Fußzeilen
+
+```latex[2-10]
+...
+\begin{titlepage}
+  % Informationen für Titel setzen
+  \title{Meine Arbeit}
+  \author{Ich}
+  \date{Heute}
+
+  % Titel generieren
+  \maketitle
+\end{titlepage}
+```
 
 ---
 ## Mathematische Symbole und Formeln
@@ -463,8 +494,127 @@ $ ... $
 
 ---
 ## Tabellen
-TODO
+
+### tabular-Umgebung
+- richtet Text Tabellen-artig aus
+```latex[2-4]
+...
+\begin{tabular}{Spaltendefinition}
+  ...
+\end{tabular}
+```
+- erster Parameter bestimmt für die Spalten
+    - die Textausrichtung
+    - sowie die Platzierung vertikaler Ränder
+
+--
+- Verwendung folgender Zeichen für den Parameter *Spaltendefinition*
+    - c zentriert
+    - l linksbündig
+    - r rechtsbündig
+    - | vertikalen Rand einfügen
+```latex[2-4]
+...
+\begin{tabular}{|cc|}
+  ...
+\end{tabular}
+```
+
+--
+- innerhalb der tabular-Umgebung werden
+  - Zeilen mit <b>\\\\</b> abgeschlossen
+  - Zell-Inhalte mit **&** getrennt
+  - horizontale Linien mit **\\hline** platziert
+
+```latex[2-9]
+...
+% Tabelle mit vertikalen Rändern | aussen
+% ... und horizontalen Rändern ganz oben und ganz unten
+\begin{tabular}{|ll|}
+    \hline
+    Äpfel & 37,33 \\
+    Birnen & 16,00 \\
+    \hline
+\end{tabular}
+```
+
+--
+#### Spalten verbinden
+- ist mit dem Befehl **\multicolumn** möglich
+- Syntax für den Parameter *Spaltendefinition* ist identisch zu dem der tabular-Umgebung
+
+```latex[]
+\multicolumn{Anzahl}{Spaltendefinition}
+```
+
+--
+- mit **\\multicolumn** ist es auch möglich, die Textausrichtung für einzelne Zellen zu überschreiben
+
+```latex[2-12]
+...
+% Tabelle mit vertikalen Rändern | aussen
+% ... und horizontalen Rändern ganz oben und ganz unten
+\begin{tabular}{|ll|}
+    \hline
+    \multicolumn{1}{|c}{\textbf{Titel 1. Spalte}}
+    & \multicolumn{1}{c|}{\textbf{Titel 1. Spalte}} \\
+    \hline
+    Äpfel & 37,33 \\
+    Birnen & 16,00 \\
+    \hline
+\end{tabular}
+```
+
+--
+#### Tabellen
+- sind **Gleitobjekte** und werden durch LaTeX automatisch positioniert
+- werden um eine Tabular-Umgebung herum im Code platziert
+- werden automatisch durchnummeriert
+- haben einen Titel
+
+
+```latex[2-7]
+...
+\begin{table}
+    \caption{Tabellentitel}
+    \begin{tabular}{...}
+      ...
+    \end{tabular}
+\end{table}
+```
 
 ---
 ## Bilder / Zeichnungen
-TODO
+### Grafiken
+- Können mit dem Paket **graphics**
+- ... und dem Befehl **\\includegraphics** eingefügt werden
+
+```latex[1,5]
+\usepackage{graphics}
+...
+\begin{document}
+  ...
+  \includegraphics{Pfad zur Bilddatei}
+  ...
+\end{document}
+```
+
+--
+### figure Umgebung
+- sind **Gleitobjekte** und werden durch LaTeX automatisch positioniert
+- werden um Grafiken herum im Code platziert
+- werden automatisch durchnummeriert
+- haben einen Titel
+
+```latex[2-5]
+...
+\begin{figure}
+  \caption{Titel der Grafik}
+  \includegraphics{sample.jpg}
+\end{figure}
+```
+
+TODO \includegraphics[width=10cm]{sample.jpg} wirft Fehler im overleaf!
+
+---
+# Fragen
