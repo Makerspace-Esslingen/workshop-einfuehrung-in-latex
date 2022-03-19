@@ -144,7 +144,7 @@ Packages definieren zusätzliche Befehle und Umgebungen für bestimmte Einsatzzw
     - automatische Silbentrennung
 - [**geometry**](https://ctan.org/pkg/geometry)
     - Seitenlayout (z.B. Seitenränder) setzen
-- [**graphics**](https://ctan.org/pkg/graphics)
+- [**graphicx**](https://ctan.org/pkg/graphicx)
     - Laden und einfügen von Grafiken
 
 --
@@ -586,15 +586,15 @@ $ ... $
 ---
 ## Bilder / Zeichnungen
 ### Grafiken
-- Können mit dem Paket **graphics**
+- Können mit dem Paket **graphicx**
 - ... und dem Befehl **\\includegraphics** eingefügt werden
 
 ```latex[1,5]
-\usepackage{graphics}
+\usepackage{graphicx}
 ...
 \begin{document}
   ...
-  \includegraphics{Pfad zur Bilddatei}
+  \includegraphics[width=Breite]{Pfad zur Bilddatei}
   ...
 \end{document}
 ```
@@ -606,15 +606,18 @@ $ ... $
 - werden automatisch durchnummeriert
 - haben einen Titel
 
-```latex[2-5]
+```latex[1,5-8]
+\usepackage{graphicx}
 ...
-\begin{figure}
-  \caption{Titel der Grafik}
-  \includegraphics{sample.jpg}
-\end{figure}
+\begin{document}
+  ...
+  \begin{figure}
+    \caption{Titel der Grafik}
+    \includegraphics[width=10cm]{sample.jpg}
+  \end{figure}
+...
+\end{document}
 ```
-
-TODO \includegraphics[width=10cm]{sample.jpg} wirft Fehler im overleaf!
 
 ---
 # Fragen
