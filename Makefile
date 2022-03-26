@@ -16,8 +16,11 @@ images:
 images/%.png: %.dvi
 	dvipng -T 14cm,5cm -O -1cm,-1cm $< -o $@
 
-images/110_table.png: 110_table.dvi
-	dvipng -T 14cm,5cm -O -1cm,-10cm $< -o $@
+images/110_table.png: demonstration-files/110_table.tex
+	latex $<
+	latex $<
+	dvipng -T 14cm,5cm -O -1cm,-10cm 110_table.dvi -o $@
+	rm 110_table.dvi
 
 images/120_graphicx.png:
 	# skipping $@
