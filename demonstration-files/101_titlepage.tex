@@ -1,0 +1,21 @@
+\documentclass[titlepage,twoside]{article}
+
+\begin{document}
+  \begin{titlepage}
+    % Informationen für Titel setzen
+    \title{Meine Arbeit}
+    \author{Ich}
+    \date{Heute}
+
+    % Titel generieren
+    \maketitle
+  \end{titlepage}
+
+  % Leerseite einfügen (Rückseite der Titelseite)
+  \null \thispagestyle{empty} \newpage
+
+  % Seitenzahl auf 1 zurücksetzen
+  \setcounter{page}{1}
+  
+  Dies ist ein Test-Absatz.
+\end{document}

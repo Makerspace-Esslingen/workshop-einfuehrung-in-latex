@@ -534,12 +534,43 @@ Beispiel
 
 ---
 ## Kopf- und Fußzeilen
-TODO
+Die **pagestyle** der article-Klasse kennt 4 Modi für Kopf- und Fußzeilen
+- Keine Kopfzeile  
+  Seitenzahlen zentriert in der Fußzeile
+  ```latex[]
+  \pagestyle{plain}
+  ```
+- Leere Kopf-/Fußzeile
+  ```latex[]
+  \pagestyle{empty}
+  ```
+
+--
+## Kopf- und Fußzeilen
+- Kopfzeile  
+    - ungerade Seiten: Überschrift der aktuellen **section**
+    - gerade Seiten: Überschrift der aktuellen **subsection**
+    - Seitenzahlen aussen
+    ```latex[]
+    \pagestyle{headings}
+    ```
+- manuelle Kopfzeilen
+  ```latex[]
+  \pagestyle{myheadings}
+  ```
+  - Kopfzeilentitel linker und rechter Seiten setzen (twoside):
+  ```latex[]
+  \markboth{Titel linke Seiten}{Titel rechte Seiten}
+  ```
+  - Kopfzeilentitel gerader Seiten setzen:
+  ```latex[]
+  \markright{Titel rechte Seiten}
+  ```
 
 ---
 ## Deckblatt
 - kann mit der Umgebung **titlepage** eingefügt werden
-- hat keine eigene Seitennummer
+- blendet seine Seitennummer aus
 - keine Kopf- oder Fußzeilen
 
 ```latex[2-10]
@@ -553,6 +584,23 @@ TODO
   % Titel generieren
   \maketitle
 \end{titlepage}
+```
+
+--
+## Deckblatt zweiseitiger Druck
+- erste Seite nach dem Deckblatt mit Seitennummer 1 versehen
+
+```latex[12-16]
+...
+\begin{titlepage}
+  ...
+\end{titlepage}
+
+% Leerseite einfügen (Rückseite der Titelseite)
+\null \thispagestyle{empty} \newpage
+
+% Seitenzahl auf 1 zurücksetzen
+\setcounter{page}{1}
 ```
 
 ---
@@ -591,7 +639,7 @@ $ ... $
   sind Winkelfunktionen.
 \end{document}
 ```
-![images/090_math.png](images/090_math.png)
+![images/110_math.png](images/110_math.png)
 
 --
 ### displaymath Umgebung
@@ -617,7 +665,7 @@ $ ... $
   \end{displaymath}
 \end{document}
 ```
-![images/091_math.png](images/091_math.png)
+![images/111_math.png](images/111_math.png)
 
 --
 ### Symbole, Brüche, Funktionen
@@ -652,7 +700,7 @@ $ ... $
   \end{itemize}
 \end{document}
 ```
-![images/092_math.png](images/092_math.png)
+![images/112_math.png](images/112_math.png)
 
 --
 ### Symbole, Brüche, Funktionen
@@ -686,7 +734,7 @@ $ ... $
     \end{itemize}
 \end{document}
 ```
-![images/093_math.png](images/093_math.png)
+![images/113_math.png](images/113_math.png)
 
 --
 ### Symbole, Brüche, Funktionen
@@ -721,7 +769,7 @@ $ ... $
   \end{itemize}
 \end{document}
 ```
-![images/094_math.png](images/094_math.png)
+![images/114_math.png](images/114_math.png)
 
 --
 ### Symbole, Brüche, Funktionen
@@ -737,7 +785,7 @@ $ ... $
   \end{displaymath}
 \end{document}
 ```
-![images/095_math.png](images/095_math.png)
+![images/115_math.png](images/115_math.png)
 
 ---
 ## tabular-Umgebung
@@ -787,7 +835,7 @@ $ ... $
     \hline
 \end{tabular}
 ```
-![images/100_tabular.png](images/100_tabular.png)
+![images/120_tabular.png](images/120_tabular.png)
 
 --
 #### Spalten verbinden
@@ -810,7 +858,7 @@ $ ... $
     \hline
 \end{tabular}
 ```
-![images/101_tabular.png](images/101_tabular.png)
+![images/121_tabular.png](images/121_tabular.png)
 
 --
 #### Titelzeilen
@@ -832,7 +880,7 @@ Textausrichtung einzelner Zellen überschreiben
     \hline
 \end{tabular}
 ```
-![images/102_tabular.png](images/102_tabular.png)
+![images/122_tabular.png](images/122_tabular.png)
 
 --
 ### Tabellen
@@ -868,7 +916,7 @@ Textausrichtung einzelner Zellen überschreiben
   \end{table}
 \end{document}
 ```
-![images/110_table.png](images/110_table.png)
+![images/130_table.png](images/130_table.png)
 
 ---
 ## Bilder / Zeichnungen
