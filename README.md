@@ -1,7 +1,9 @@
 # Workshop Einführung in LaTeX
 
 ## Präsentation
+[https://Makerspace-Esslingen.github.io/workshop-einfuehrung-in-latex/presentation.html](https://Makerspace-Esslingen.github.io/workshop-einfuehrung-in-latex/presentation.html)
+### lokal starten
 ```
-python -m http.server 8080
-xdg-open http://localhost:8080/presentation.html
+make
+./run-presentation.sh
 ```
