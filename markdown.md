@@ -690,6 +690,41 @@ $ ... $
 
 --
 ### Symbole, Brüche, Funktionen
+- Klammern ( ... )
+```latex[]
+\left( ... \right)
+```
+- Klammern [ ... ]
+```latex[]
+\left[ ... \right]
+```
+- Klammern { ... }
+```latex[]
+\left\{ ... \right\}
+```
+- Klammern &lt; ... &gt;
+```latex[]
+\langle ... \rangle
+```
+
+--
+### Symbole, Brüche, Funktionen
+```latex[5-8]
+\documentclass{article}
+
+\begin{document}
+  \begin{itemize}
+    \item $\left( ... \right)$
+    \item $\left\{ ... \right\}$
+    \item $\left[ ... \right]$
+    \item $\langle ... \rangle$
+  \end{itemize}
+\end{document}
+```
+![images/094_math.png](images/094_math.png)
+
+--
+### Symbole, Brüche, Funktionen
 ```latex[5,7-9]
 \documentclass{article}
 
@@ -702,7 +737,7 @@ $ ... $
   \end{displaymath}
 \end{document}
 ```
-![images/094_math.png](images/094_math.png)
+![images/095_math.png](images/095_math.png)
 
 ---
 ## tabular-Umgebung
