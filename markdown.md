@@ -1,19 +1,67 @@
 # Einführung in LaTeX
 
 ---
-## Warum LaTeX
+## Agenda
+
+1. [Warum LaTeX](#Warum-LaTeX)
+2. [LaTeX-Editor](#LaTeX-Editor)
+3. [Die Sprache LaTeX](#Sprache-LaTeX)
+    1. [Minimales LaTeX-Dokument](#Minimales-LaTeX-Dokument)
+    2. [Dokumentklassen](#Dokumentklassen)
+    3. [Befehle und Umgebungen](#Befehle)
+    4. [Formatierung und Absätze](#Formatierung)
+    5. [Umlaute und Sonderzeichen](#UmlauteSonderzeichen)
+    6. [Packages](#Packages)
+        1. [Standardpakete](#Standardpakete)
+
+--
+3. [Die Sprache LaTeX](#Sprache-LaTeX)
+    7. [Beispiel-Dokumentkopf](#BeispielDokumentkopf)
+    8. [Dokument formatieren und strukturieren](#DokumentFormatieren)
+        1. [Zeilenabstand setzen](#Zeilenabstand)
+        2. [Schriftart wählen](#Schriftart)
+        3. [Horizontale Ausrichtung](#Ausrichtung)
+    9. [Listen und Aufzählungen](#ListenAufzaehlungen)
+        1. [Listen](#Listen)
+        2. [Aufzählungen](#Aufzaehlungen)
+    10. [Überschriften und Inhaltsverzeichnis](#UeberschriftenInhaltsverzeichnis)
+
+--
+3. [Die Sprache LaTeX](#Sprache-LaTeX)
+    11. [Kopf- und Fußzeilen](#KopfFusszeilen)
+    12. [Deckblatt](#Deckblatt)
+    13. [Mathematische Symbole und Formeln](#MathSymboleUndFormeln)
+        1. [Math mode](#MathMode)
+        2. [Displaymath Umgebung](#Displaymath)
+        3. [Symbole, Brüche und Funktionen](#SymboleBruecheFunktionen)
+    14. [Tabellen und die Tabular-Umgebung](#TabellenTabularUmgebung)
+        1. [Tabular-Umgebung](#TabularUmgebung)
+        2. [Table-Umgebung](#TableUmgebung)
+
+--
+3. [Die Sprache LaTeX](#Sprache-LaTeX)
+    15. [Bilder / Zeichnungen](#BilderZeichnungen)
+        1. [Grafiken](#Grafiken)
+        2. [Figure-Umgebung](#FigureUmgebung)
+4. [Web-Links](#WebLinks)
+
+---
+## Warum LaTeX <!-- .element: id="Warum-LaTeX" -->
 - Bearbeiten sehr umfangreicher Dokumente auf schwachen Rechnern
 - Eingabe von Quellcode statt umfangreicher Menüs und Untermenüs und Formeleditoren
 
 ---
-## LaTeX-Editor
+## LaTeX-Editor <!-- .element: id="LaTeX-Editor" -->
 1. Texteditor + Installation einer LaTeX-Distribution  
 z.B. TexLive - [https://tug.org/texlive/](https://tug.org/texlive/)
 2. oder online im Browser:  
 Overleaf - [https://de.overleaf.com/](https://de.overleaf.com/)
 
 ---
-## Minimales LaTeX-Dokument
+## Die Sprache LaTeX <!-- .element id="#Sprache-LaTeX" -->
+
+---
+### Minimales LaTeX-Dokument <!-- .element: id="Minimales-LaTeX-Dokument" -->
 
 ```latex[1-2|4-6]
 % setzen der Dokumentklasse
@@ -25,7 +73,7 @@ Overleaf - [https://de.overleaf.com/](https://de.overleaf.com/)
 ```
 
 ---
-### Dokumentklassen
+### Dokumentklassen <!-- .element: id="Dokumentklassen" -->
 - **article**
     - für wissenschaftliche Artikel
     - typischer Weise wenige Seiten
@@ -52,7 +100,7 @@ Der Workshop fokussiert sich auf die **article**-Class.
 Weitere Dokumentklassen und deren Optionen siehe Kapitel 3 in [LaTeX2e: An unofficial reference manual](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)
 
 ---
-### Befehle und Umgebungen
+### Befehle und Umgebungen <!-- .element: id="Befehle" -->
 
 ```latex[1|2|3|5-6|8-9]
 \befehlsname
@@ -67,7 +115,7 @@ Weitere Dokumentklassen und deren Optionen siehe Kapitel 3 in [LaTeX2e: An unoff
 ```
 
 ---
-### Formatierung und Absätze
+### Formatierung und Absätze <!-- .element: id="Formatierung" -->
 - **\textbf{...}**  
     Text wird fett gedruckt
 - **\textit{...}**  
@@ -103,7 +151,7 @@ Hinter diesem Wort \\ kommt ein erzwungener Zeilenumbruch
 ```
 
 ---
-### Umlaute und Sonderzeichen
+### Umlaute und Sonderzeichen <!-- .element: id="UmlauteSonderzeichen" -->
 
  als Befehl
  - **\\"a** bzw. **\\"A"** für ä bzw. Ä
@@ -141,7 +189,7 @@ direkt verwenden durch Einbinden des *inputenc* Packages (ab TexLive >=2018 nich
 ![images/021_umlauts.png](images/021_umlauts.png)
 
 ---
-### Packages
+### Packages <!-- .element: id="Packages" -->
 
 - Packages definieren zusätzliche Befehle und Umgebungen für bestimmte Einsatzzwecke.
 - Dokumentation zu einzelnen Packages: [https://ctan.org/pkg/](https://ctan.org/pkg/)
@@ -151,7 +199,7 @@ direkt verwenden durch Einbinden des *inputenc* Packages (ab TexLive >=2018 nich
 ```
 
 --
-### Standardpakete
+### Standardpakete <!-- .element: id="Standardpakete" -->
 
 - [**babel**](https://ctan.org/pkg/babel)
     - automatische Silbentrennung
@@ -175,8 +223,8 @@ direkt verwenden durch Einbinden des *inputenc* Packages (ab TexLive >=2018 nich
 - [**makeidx**](https://ctan.org/pkg/makeidx)
     - Erzeugung von Stichwortverzeichnissen -->
 
---
-### Beispiel-Dokumentkopf
+---
+### Beispiel-Dokumentkopf <!-- .element: id="BeispielDokumentkopf" -->
 ```latex[1-7|9-11|13-15|17-18|20-22]
 % Dokumentklasse article auswählen
 %   Optionen:
@@ -203,8 +251,10 @@ Dies ist ein Absatz mit Text.
 ```
 
 ---
-## Text formatieren und strukturieren
-### Zeilenabstand setzen
+## Dokument formatieren und strukturieren <!-- .element: id="DokumentFormatieren" -->
+
+--
+### Zeilenabstand setzen <!-- .element: id="Zeilenabstand" -->
 Das Package [**setspace**](https://ctan.org/pkg/setspace?lang=de) bringt eine Reihe von Befehlen mit, um den Zeilenabstand des Dokuments zu Beginn zu setzen:
 
 - **\singlespacing**  
@@ -244,9 +294,9 @@ Alternativ führt das **setspace** Package Umgebungen ein, innerhalb derer ein b
 ```
 
 --
-### Schriftart wählen
+### Schriftart wählen <!-- .element: id="Schriftart" -->
 - PdfLaTeX unterstützt die Schriftarten des **fontenc** Packages (siehe Kapitel 4 in [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)).
-- Liste aller Schriftarten:    
+- Liste aller Schriftarten:  
     [https://tug.org/FontCatalogue/](https://tug.org/FontCatalogue/)  
 
 z.B.
@@ -292,7 +342,7 @@ Dies ist ein Beispielabsatz in der Schriftart Helvetica.
 ![images/041_font_helvet.png](images/041_font_helvet.png)
 
 --
-### horizontale Ausrichtung
+### horizontale Ausrichtung <!-- .element: id="Ausrichtung" -->
 - Umgebungen für horizontale Textausrichtung
     - linksbündig
     ```latex[]
@@ -337,8 +387,11 @@ Dies ist ein Beispielabsatz in der Schriftart Helvetica.
 ```
 ![images/051_paragraph_flush.png](images/051_paragraph_flush.png)
 
+---
+## Listen und Aufzählungen <!-- .element: id="ListenAufzaehlungen" -->
+
 --
-### Listen
+### Listen <!-- .element: id="Listen" -->
 - Listen lassen sich mit der **itemize** Umgebung einfügen
 ```latex[]
 \begin{itemize} ... \end{itemize}
@@ -383,7 +436,7 @@ Dies ist ein Beispielabsatz in der Schriftart Helvetica.
 ![images/061_lists.png](images/061_lists.png)
 
 ---
-### Aufzählungen
+### Aufzählungen <!-- .element: id="Aufzaehlungen" -->
 - Für Aufzählungen gibt es die **enumerate** Umgebung
 ```latex[]
 \begin{itemize} ... \end{itemize}
@@ -430,7 +483,7 @@ Dies ist ein Beispielabsatz in der Schriftart Helvetica.
 ![images/071_enumerations.png](images/071_enumerations.png)
 
 ---
-### Überschriften und Inhaltsverzeichnis
+### Überschriften und Inhaltsverzeichnis <!-- .element: id="UeberschriftenInhaltsverzeichnis" -->
 Die article-Class definiert 5 Standardebenen für Überschriften
 - **\section**
 - **\subsection**
@@ -533,7 +586,7 @@ Beispiel
 ```
 
 ---
-## Kopf- und Fußzeilen
+## Kopf- und Fußzeilen <!-- .element: id="KopfFusszeilen" -->
 Die **pagestyle** der article-Klasse kennt 4 Modi für Kopf- und Fußzeilen
 - Keine Kopfzeile  
   Seitenzahlen zentriert in der Fußzeile
@@ -568,7 +621,7 @@ Die **pagestyle** der article-Klasse kennt 4 Modi für Kopf- und Fußzeilen
   ```
 
 ---
-## Deckblatt
+## Deckblatt <!-- .element: id="Deckblatt" -->
 - kann mit der Umgebung **titlepage** eingefügt werden
 - blendet seine Seitennummer aus
 - keine Kopf- oder Fußzeilen
@@ -604,12 +657,12 @@ Die **pagestyle** der article-Klasse kennt 4 Modi für Kopf- und Fußzeilen
 ```
 
 ---
-## Mathematische Symbole und Formeln
+## Mathematische Symbole und Formeln <!-- .element: id="MathSymboleUndFormeln" -->
 - Siehe Kapitel 16 [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)  
 - Befehle für Formeln und Symbole funktionieren entweder im **Math mode** oder in einer **displaymath**-Umgebung
 
 --
-### Math mode
+### Math mode <!-- .element: id="MathMode" -->
 - mathematische Ausdrücke im Fliesstext
 -
 ```latex[]
@@ -642,14 +695,14 @@ $ ... $
 ![images/110_math.png](images/110_math.png)
 
 --
-### displaymath Umgebung
+### Displaymath Umgebung <!-- .element: id="Displaymath" -->
 - mathematische Formeln zentriert ausserhalb des Textes
 ```latex[]
 \begin{displaymath} ... \end{displaymath}
 ```
 
 --
-### displaymath Umgebung
+### Displaymath Umgebung
 ```latex[6-12]
 ...
 
@@ -668,7 +721,7 @@ $ ... $
 ![images/111_math.png](images/111_math.png)
 
 --
-### Symbole, Brüche, Funktionen
+### Symbole, Brüche, Funktionen <!-- .element: id="SymboleBruecheFunktionen" -->
 - Pi
   ```latex[]
     \pi
@@ -788,7 +841,10 @@ $ ... $
 ![images/115_math.png](images/115_math.png)
 
 ---
-## tabular-Umgebung
+## Tabellen und die tabular-Umgebung <!-- .element id="TabellenTabularUmgebung" -->
+
+-
+## tabular-Umgebung <!-- .element id="TabularUmgebung" -->
 - richtet Text Tabellen-artig aus
 ```latex[2-4]
 ...
@@ -801,7 +857,6 @@ $ ... $
     - sowie die Platzierung vertikaler Ränder
 
 --
-## Tabellen
 ### tabular-Umgebung
 - Verwendung folgender Zeichen für den Parameter *Spaltendefinition*
     - c zentriert
@@ -883,11 +938,11 @@ Textausrichtung einzelner Zellen überschreiben
 ![images/122_tabular.png](images/122_tabular.png)
 
 --
-### Tabellen
-- sind **Gleitobjekte** und werden durch LaTeX automatisch positioniert
-- werden um eine Tabular-Umgebung herum im Code platziert
-- werden automatisch durchnummeriert
-- haben einen Titel
+### Table-Umgebung <!-- .element id="TableUmgebung" -->
+- ist ein **Gleitobjekt** und wird durch LaTeX automatisch positioniert
+- wird um eine Tabular-Umgebung herum im Code platziert
+- wird automatisch durchnummeriert
+- hat einen Titel
 
 
 ```latex[2-7]
@@ -901,7 +956,7 @@ Textausrichtung einzelner Zellen überschreiben
 ```
 
 --
-### Tabellen
+### Table-Umgebung
 ```latex[2-3,11]
 \begin{document}
   \begin{table}
@@ -919,8 +974,8 @@ Textausrichtung einzelner Zellen überschreiben
 ![images/130_table.png](images/130_table.png)
 
 ---
-## Bilder / Zeichnungen
-### Grafiken
+## Bilder / Zeichnungen <!-- .element id="BilderZeichnungen" -->
+### Grafiken <!-- .element id="Grafiken" -->
 - Können mit dem Paket **graphicx**
 - ... und dem folgenden Befehl eingefügt werden
 ```latex[]
@@ -938,7 +993,7 @@ Textausrichtung einzelner Zellen überschreiben
 ```
 
 --
-### figure Umgebung
+### Figure-Umgebung <!-- .element id="FigureUmgebung" -->
 - figures sind **Gleitobjekte** und werden durch LaTeX automatisch positioniert
   ```latex
   \begin{figure} ... \end{figure}
@@ -948,7 +1003,7 @@ Textausrichtung einzelner Zellen überschreiben
 - haben einen Titel
 
 --
-### figure Umgebung
+### Figure-Umgebung
 ```latex[1,5-8]
 \usepackage{graphicx}
 ...
@@ -961,6 +1016,17 @@ Textausrichtung einzelner Zellen überschreiben
 ...
 \end{document}
 ```
+
+---
+# Web-Links <!-- .element id="WebLinks" -->
+## LaTeX-Umgebungen
+- (Overleaf Online-Editor)[https://de.overleaf.com/]
+- (Liste von LaTeX-Distributionen)[https://tug.org/interest.html#free]
+## Dokumentation
+- [LaTeX-Sheet Uni-Frankfurt](https://www.uni-frankfurt.de/53485609/latexsheet.pdf) - 2 A4 Seiten Kurzreferenz
+- [LaTeX2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf) - ausführliche Referenz durch viele Themengeiete
+- [LaTeX-Wiki TU-Graz](https://latex.tugraz.at/)
+- [CTAN](https://www.ctan.org/) - Liste + Doku aller Packages
 
 ---
 # Fragen
