@@ -1022,6 +1022,9 @@ Textausrichtung einzelner Zellen überschreiben
 ## LaTeX-Umgebungen
 - (Overleaf Online-Editor)[https://de.overleaf.com/]
 - (Liste von LaTeX-Distributionen)[https://tug.org/interest.html#free]
+
+--
+# Web-Links
 ## Dokumentation
 - [LaTeX-Sheet Uni-Frankfurt](https://www.uni-frankfurt.de/53485609/latexsheet.pdf) - 2 A4 Seiten Kurzreferenz
 - [LaTeX2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf) - ausführliche Referenz durch viele Themengeiete
