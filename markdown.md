@@ -185,10 +185,11 @@ direkt verwenden durch Einbinden des *inputenc* Packages (ab TexLive >=2018 nich
 
 --
 ### Umlaute und Sonderzeichen
-```latex[3,6]
+```latex[3-4,7]
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \begin{document}
 ä ö ü Ä Ö Ü ß
