@@ -3,7 +3,7 @@ targetimages = $(patsubst demonstration-files/%.tex,images/%.png,$(wildcard demo
 all: images make-images
 
 clean:
-	rm -f *.aux *.log *.dvi *.png
+	rm -f *.aux *.log *.toc *.dvi *.png
 	rm -rf images
 
 %.dvi: demonstration-files/%.tex
