@@ -201,7 +201,7 @@ direkt verwenden durch Einbinden des *inputenc* Packages (ab TexLive >=2018 nich
 ### Packages
 
 - Packages definieren zusätzliche Befehle und Umgebungen für bestimmte Einsatzzwecke.
-- Dokumentation zu einzelnen Packages: [https://ctan.org/pkg/](https://ctan.org/pkg/)
+- Dokumentation zu einzelnen Packages: [https://ctan.org/pkg/](https://ctan.org/pkg/) <!-- .element target="_blank" -->
 - Einbinden eines Packages per
 ```latex
 \usepackage[Optionen]{Paketname}
