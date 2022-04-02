@@ -628,6 +628,9 @@ Die **pagestyle** der article-Klasse kennt 4 Modi für Kopf- und Fußzeilen
     ```latex[]
     \pagestyle{headings}
     ```
+
+--
+## Kopf- und Fußzeilen
 - manuelle Kopfzeilen
   ```latex[]
   \pagestyle{myheadings}
