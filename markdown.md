@@ -55,9 +55,9 @@
 <!-- .element: id="LaTeXEditor" -->
 ## LaTeX-Editor
 1. Texteditor + Installation einer LaTeX-Distribution  
-z.B. TexLive - [https://tug.org/texlive/](https://tug.org/texlive/)
+z.B. TexLive - [https://tug.org/texlive/](https://tug.org/texlive/) <!-- .element target="_blank" -->
 2. oder online im Browser:  
-Overleaf - [https://de.overleaf.com/](https://de.overleaf.com/)
+Overleaf - [https://de.overleaf.com/](https://de.overleaf.com/) <!-- .element target="_blank" -->
 
 ---
 <!-- .element id="SpracheLaTeX" -->
@@ -102,7 +102,7 @@ Overleaf - [https://de.overleaf.com/](https://de.overleaf.com/)
 ### Dokumentklassen
 Der Workshop fokussiert sich auf die **article**-Class.
 
-Weitere Dokumentklassen und deren Optionen siehe Kapitel 3 in [LaTeX2e: An unofficial reference manual](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)
+Weitere Dokumentklassen und deren Optionen siehe Kapitel 3 in [LaTeX2e: An unofficial reference manual](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf) <!-- .element target="_blank" -->
 
 ---
 <!-- .element: id="Befehle" -->
@@ -211,20 +211,20 @@ direkt verwenden durch Einbinden des *inputenc* Packages (ab TexLive >=2018 nich
 <!-- .element: id="Standardpakete" -->
 ### Standardpaket
 
-- [**babel**](https://ctan.org/pkg/babel)
+- [**babel**](https://ctan.org/pkg/babel) <!-- .element target="_blank" -->
     - automatische Silbentrennung
-- [**geometry**](https://ctan.org/pkg/geometry)
+- [**geometry**](https://ctan.org/pkg/geometry) <!-- .element target="_blank" -->
     - Seitenlayout (z.B. Seitenränder) setzen
-- [**graphicx**](https://ctan.org/pkg/graphicx)
+- [**graphicx**](https://ctan.org/pkg/graphicx) <!-- .element target="_blank" -->
     - Laden und einfügen von Grafiken
 
 --
 ### Standardpakete
-- [**inputenc**](https://ctan.org/pkg/inputenc)
+- [**inputenc**](https://ctan.org/pkg/inputenc) <!-- .element target="_blank" -->
     - Setzen der Quelltext-Kodierung für korrekte Verwendung von Sonderzeichen
-- [**setspace**](https://ctan.org/pkg/setspace)
+- [**setspace**](https://ctan.org/pkg/setspace) <!-- .element target="_blank" -->
     - Setzen von Zeilenabständen
-<!-- - [**amsmath**](https://ctan.org/pkg/amsmath)   
+<!-- - [**amsmath**](https://ctan.org/pkg/amsmath)
     - Ausgerichtetes Setzen von mehrstufigen Berechnungen / Herleitungen / Beweisen
 - [**glossaries**](https://ctan.org/pkg/glossaries)
     - Verschiedene Index-Typen für Stichwortverzeichnis, Glossar, Abkürzungsverzeichnis, ...
@@ -268,7 +268,7 @@ Dies ist ein Absatz mit Text.
 --
 <!-- .element: id="Zeilenabstand" -->
 ### Zeilenabstand setzen
-Das Package [**setspace**](https://ctan.org/pkg/setspace?lang=de) bringt eine Reihe von Befehlen mit, um den Zeilenabstand des Dokuments zu Beginn zu setzen:
+Das Package [**setspace**](https://ctan.org/pkg/setspace?lang=de) <!-- .element target="_blank" --> bringt eine Reihe von Befehlen mit, um den Zeilenabstand des Dokuments zu Beginn zu setzen:
 
 - **\singlespacing**  
 - **\onehalfspacing**  
@@ -309,9 +309,9 @@ Alternativ führt das **setspace** Package Umgebungen ein, innerhalb derer ein b
 --
 <!-- .element: id="Schriftart" -->
 ### Schriftart wählen
-- PdfLaTeX unterstützt die Schriftarten des **fontenc** Packages (siehe Kapitel 4 in [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)).
+- PdfLaTeX unterstützt die Schriftarten des **fontenc** Packages (siehe Kapitel 4 in [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf) <!-- .element target="_blank" -->).
 - Liste aller Schriftarten:  
-    [https://tug.org/FontCatalogue/](https://tug.org/FontCatalogue/)  
+    [https://tug.org/FontCatalogue/](https://tug.org/FontCatalogue/)  <!-- .element target="_blank" -->
 
 z.B.
 ```latex[2-3]
@@ -680,7 +680,7 @@ Die **pagestyle** der article-Klasse kennt 4 Modi für Kopf- und Fußzeilen
 ---
 <!-- .element: id="MathSymboleUndFormeln" -->
 ## Mathematische Symbole und Formeln
-- Siehe Kapitel 16 [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf)  
+- Siehe Kapitel 16 [latex2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf) <!-- .element target="_blank" -->
 - Befehle für Formeln und Symbole funktionieren entweder im **Math mode** oder in einer **displaymath**-Umgebung
 
 --
@@ -1051,16 +1051,16 @@ Textausrichtung einzelner Zellen überschreiben
 <!-- .element id="WebLinks" -->
 # Web-Links
 ## LaTeX-Umgebungen
-- [Overleaf Online-Editor](https://de.overleaf.com/)
-- [Liste von LaTeX-Distributionen](https://tug.org/interest.html#free)
+- [Overleaf Online-Editor](https://de.overleaf.com/) <!-- .element target="_blank" -->
+- [Liste von LaTeX-Distributionen](https://tug.org/interest.html#free) <!-- .element target="_blank" -->
 
 --
 # Web-Links
 ## Dokumentation
-- [LaTeX-Sheet Uni-Frankfurt](https://www.uni-frankfurt.de/53485609/latexsheet.pdf) - 2 A4 Seiten Kurzreferenz
-- [LaTeX2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf) - ausführliche Referenz durch viele Themengeiete
-- [LaTeX-Wiki TU-Graz](https://latex.tugraz.at/)
-- [CTAN](https://www.ctan.org/) - Liste + Doku aller Packages
+- [LaTeX-Sheet Uni-Frankfurt](https://www.uni-frankfurt.de/53485609/latexsheet.pdf) - 2 A4 Seiten Kurzreferenz <!-- .element target="_blank" -->
+- [LaTeX2e](https://ftp.agdsn.de/pub/mirrors/latex/dante/info/latex2e-help-texinfo/latex2e.pdf) - ausführliche Referenz durch viele Themengeiete <!-- .element target="_blank" -->
+- [LaTeX-Wiki TU-Graz](https://latex.tugraz.at/) <!-- .element target="_blank" -->
+- [CTAN](https://www.ctan.org/) - Liste + Doku aller Packages <!-- .element target="_blank" -->
 
 ---
 # Fragen
