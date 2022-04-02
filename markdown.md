@@ -1051,8 +1051,8 @@ Textausrichtung einzelner Zellen überschreiben
 <!-- .element id="WebLinks" -->
 # Web-Links
 ## LaTeX-Umgebungen
-- (Overleaf Online-Editor)[https://de.overleaf.com/]
-- (Liste von LaTeX-Distributionen)[https://tug.org/interest.html#free]
+- [Overleaf Online-Editor](https://de.overleaf.com/)
+- [Liste von LaTeX-Distributionen](https://tug.org/interest.html#free)
 
 --
 # Web-Links
