@@ -285,9 +285,9 @@ Das Package [**setspace**](https://ctan.org/pkg/setspace?lang=de) <!-- .element 
 ### Zeilenabstand setzen
 Alternativ führt das **setspace** Package Umgebungen ein, innerhalb derer ein bestimmte Zeilenabstand vorgegeben werden kann.  
 
-- **singlespacing**  
-- **onehalfspacing**  
-- **doublespacing**  
+- **singlespace**  
+- **onehalfspace**  
+- **doublespace**  
 - **spacing{Faktor}**
 
 --
