@@ -162,9 +162,9 @@ Hinter diesem Wort \\ kommt ein erzwungener Zeilenumbruch
 ### Umlaute und Sonderzeichen
 
  als Befehl
- - **\\"a** bzw. **\\"A"** für ä bzw. Ä
- - **\\"o** bzw. **\\"O"** für ö bzw. Ö
- - **\\"u** bzw. **\\"U"** für ü bzw. Ü
+ - **\\"a** bzw. **\\"A** für ä bzw. Ä
+ - **\\"o** bzw. **\\"O** für ö bzw. Ö
+ - **\\"u** bzw. **\\"U** für ü bzw. Ü
  - **{\\ss}** für ß
 
 --
